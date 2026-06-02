@@ -1,0 +1,6 @@
+{
+    "editor.autoClosingBrackets": "always",
+    "workbench.colorTheme": "Visual Studio 2017 Light - C++",
+    "workbench.preferredHighContrastColorTheme": "Visual Studio Light - C++",
+    "python-envs.defaultEnvManager": "ms-python.python:system"
+}

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Irrigtor</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.jpeg">
+</head>
+
+<body>
+
+    
+    <div class="top-bar">
+        <div>Simply MOIST WANTED!</div>
+        <div>
+            consumercare@brocode.com | +91 12345 96324
+        </div>
+    </div>
+
+    
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="favicon.jpeg" alt="Irrigation Logo">
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#calculator">Predictor</a></li>
+            <li><a href="#facts">Facts</a></li>
+            <li><a href="#how">That's the way</a></li>
+            <li><a href="#contact">Reach us</a></li>
+        </ul>
+
+    </nav>
+
+    
+    <section class="hero">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <p>SMART FARMING • WATER CONSERVATION</p>
+            <h1>Irrigation Predictor</h1>
+        </div>
+
+    </section>
+
+    
+    <section class="intro">
+
+        <h2>Smart Irrigation for Sustainable Farming</h2>
+
+        <p>
+            The irrigator predictor helps farmers determine suitable
+            irrigation requirements based on soil conditions, weather,
+            and crop characteristics. Efficient irrigation leads to
+            higher yields, lower water consumption, and healthier crops.
+        </p>
+
+    </section>
+
+    
+    <section class="calculator" id="calculator">
+
+    <div class="form-box">
+
+        <h2>Irrigation Design Predictor</h2>
+
+        <label for="soilType">Soil Type</label>
+        <select id="soilType">
+            <option value="">Select Soil Type</option>
+            <option value="Loamy">Loamy</option>
+            <option value="Clay">Clay</option>
+            <option value="Sandy">Sandy</option>
+            <option value="Silt">Silt</option>
+        </select>
+
+        <label for="soilMoisture">Soil Moisture</label>
+        <input
+            id="soilMoisture"
+            type="number"
+            placeholder="Enter Soil Moisture">
+
+        <label for="temperature">Temperature (°C)</label>
+        <input
+            id="temperature"
+            type="number"
+            placeholder="Enter Temperature">
+
+        <label for="humidity">Humidity (%)</label>
+        <input
+            id="humidity"
+            type="number"
+            placeholder="Enter Humidity">
+
+        <label for="rainfall">Rainfall (mm)</label>
+        <input
+            id="rainfall"
+            type="number"
+            placeholder="Enter Rainfall">
+
+        <label for="sunlight">Sunlight Hours</label>
+        <input
+            id="sunlight"
+            type="number"
+            placeholder="Enter Sunlight Hours">
+
+        <label for="windSpeed">Wind Speed (km/h)</label>
+        <input
+            id="windSpeed"
+            type="number"
+            placeholder="Enter Wind Speed">
+
+        <label for="cropType">Crop Type</label>
+        <input
+            id="cropType"
+            type="text"
+            placeholder="e.g. Wheat">
+
+        <label for="previousIrrigation">Previous Irrigation (mm)</label>
+        <input
+            id="previousIrrigation"
+            type="number"
+            placeholder="Enter Previous Irrigation">
+
+        <button onclick="predictIrrigation()">
+            Predict Irrigation Need
+        </button>
+
+        <h3 id="result"></h3>
+
+    </div>
+
+    </section>
+
+    
+    <section class="facts-section" id="facts">
+
+        <h2>Interesting Facts About Irrigation</h2>
+
+        <div class="facts-container">
+
+            <div class="fact-card">
+                <h3>💧 Water Saving</h3>
+
+                <p>
+                    Drip irrigation can reduce water usage by up to 50%
+                    compared to traditional irrigation methods.
+                </p>
+
+                <a href="https://en.wikipedia.org/wiki/Drip_irrigation" target="_blank">
+                    Read More
+                </a>
+            </div>
+
+            <div class="fact-card">
+                <h3>🌱 Better Yield</h3>
+
+                <p>
+                    Controlled irrigation improves crop productivity
+                    and enhances nutrient absorption.
+                </p>
+
+                <a href="https://www.fao.org" target="_blank">
+                    Read More
+                </a>
+            </div>
+
+            <div class="fact-card">
+                <h3>☀ Climate Impact</h3>
+
+                <p>
+                    Weather conditions play a major role in determining
+                    irrigation requirements.
+                </p>
+
+                <a href="https://www.nasa.gov" target="_blank">
+                    Read More
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    
+    <section class="how-works" id="how">
+
+        <h2>How This Works</h2>
+
+        <div class="steps">
+
+            <div class="step">
+                <span>1</span>
+                <h3>Enter Inputs</h3>
+
+                <p>
+                    Provide soil type, temperature, humidity,
+                    rainfall, sunlight and crop information.
+                </p>
+            </div>
+
+            <div class="step">
+                <span>2</span>
+                <h3>Analyze Data</h3>
+
+                <p>
+                    The system processes environmental
+                    and agricultural conditions.
+                </p>
+            </div>
+
+            <div class="step">
+                <span>3</span>
+                <h3>Generate Prediction</h3>
+
+                <p>
+                    Irrigation recommendations are
+                    calculated automatically.
+                </p>
+            </div>
+
+            <div class="step">
+                <span>4</span>
+                <h3>View Results</h3>
+
+                <p>
+                    Get irrigation insights to improve
+                    water efficiency and crop yield.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    
+    <footer class="footer" id="contact">
+
+        <div class="footer-content">
+
+            <div class="footer-box">
+                <h3>Irrigation Predictor</h3>
+
+                <p>
+                    Helping farmers improve productivity through
+                    efficient irrigation requirement thus producing crops that are MOIST WANTED!!
+                </p>
+            </div>
+
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#calculator">Calculator</a></li>
+                    <li><a href="#facts">Facts</a></li>
+                    <li><a href="#how">How It Works</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h3>Contact Us</h3>
+
+                <p>Email: consumercare@brocode.com</p>
+                <p>Phone: +91 12345 96324</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Irrigator. All Rights Reserved.
+        </div>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
