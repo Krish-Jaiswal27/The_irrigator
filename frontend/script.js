@@ -4,7 +4,7 @@ async function predictIrrigation() {
 
     result.innerText = "Predicting...";
 
-    const payload = {
+    const input = {
         Soil_Type: document.getElementById("soilType").value,
         Soil_Moisture: Number(document.getElementById("soilMoisture").value),
         Temperature_C: Number(document.getElementById("temperature").value),
@@ -27,11 +27,21 @@ async function predictIrrigation() {
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify(payload)
+                body: JSON.stringify(input)
             }
         );
 
         const data = await response.json();
+        if (!response.ok) {
+
+            if (data.message) {
+                result.innerText = data.message;
+            } else {
+                result.innerText = "Invalid input.";
+            }
+
+            return;
+        }
 
         result.innerText =
             "Recommended Irrigation Level: " +

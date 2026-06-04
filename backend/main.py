@@ -17,18 +17,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-# Load trained model
 model = joblib.load("irrigation_model.pkl")
 
 
 class IrrigationInput(BaseModel):
     Soil_Type: str
-    Soil_Moisture: float = Field(..., gt=0)
+    Soil_Moisture: float = Field(..., ge=0 , le=100)
     Temperature_C: float
-    Humidity: float = Field(..., gt=0)
+    Humidity: float = Field(..., ge=0 , le= 100)
     Rainfall_mm: float = Field(..., gt=0)
-    Sunlight_Hours: float = Field(..., gt=0)
+    Sunlight_Hours: float = Field(..., ge=0 , le=24)
     Wind_Speed_kmh: float = Field(..., gt=0)
     Crop_Type: str
     Previous_Irrigation_mm: float = Field(..., gt=0)
